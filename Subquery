@@ -1,0 +1,17 @@
+# Subquery
+
+employee_id    first_name     last_name    hourly_pay 
+     1           John           Smith        20.00
+     2           Kelly          Jones        40.00
+     3           Michael        Ross         60.00
+     4           Ronald         Gonzalez     50.00
+
+SELECT first_name, last_name, hourly_pay
+FROM employees
+WHERE hourly_pay > (SELECT AVG(hourly_pay) FROM employees) AS average_pay
+
+first_name     last_name     hourly_pay  average_pay
+   John           Smith        20.00        42.50
+   Kelly          Jones        40.00        42.50
+   Michael        Ross         60.00        42.50
+  Ronald         Gonzalez      50.00        42.50
