@@ -1,0 +1,19 @@
+# COUNT, MAX, MIN, AVG
+
+employee_id    first_name     last_name    hourly_pay 
+     1           John           Smith        20.00
+     2           Kelly          Jones        40.00
+     3           Michael        Ross         60.00
+     4           Ronald         Gonzalez     50.00
+
+SELECT COUNT(employee_id) AS total_employees
+FROM employees;
+
+SELECT MAX(hourly_pay) AS highest_pay
+FROM employees;
+
+SELECT MIN(hourly_pay) AS lowest_pay
+FROM employees;
+
+SELECT AVG(hourly_pay) AS average_hourly_pay
+FROM employees;
