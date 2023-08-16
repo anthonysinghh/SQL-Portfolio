@@ -1,0 +1,35 @@
+# Creating an Employees Table
+
+CREATE TABLE employees (
+  first_name VARCHAR(50),
+  last_name VARCHAR(50),
+  hourly_pay DECIMAL (4,2),
+  employee_id INT );
+---------------------------------
+# Altering Tables
+
+ALTER TABLE employees
+ADD phone_number VARCHAR(20);
+---------------------------------
+# Modifying Columns 
+
+ALTER TABLE employees
+MODIFY employee_id INT
+FIRST;
+---------------------------------
+# Inserting rows 
+
+INSERT INTO employees
+VALUES (1, "John", "Smith", 20.00),
+       (2, "Kelly", "Jones", 40.00),
+       (3, "Michael", "Ross", 60.00),
+       (4, "Ronald", "Gonzalez", 50.00);
+-----------------------------------------
+# Updating and Deleting
+
+UPDATE employees
+set hourly_pay = 55.00
+WHERE employee_id = 4
+
+DELETE from employees
+WHERE employee_id = 3
