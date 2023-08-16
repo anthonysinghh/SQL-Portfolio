@@ -1,0 +1,11 @@
+# Order By
+
+employee_id    first_name     last_name    hourly_pay 
+     1           John           Smith        20.00
+     2           Kelly          Jones        40.00
+     3           Michael        Ross         60.00
+     4           Ronald         Gonzalez     50.00
+
+SELECT *
+FROM employees
+ORDER BY last_name DESC; 
