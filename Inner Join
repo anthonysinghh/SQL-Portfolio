@@ -1,0 +1,20 @@
+# Inner Join
+
+OrderID	 CustomerID	  OrderDate
+10308	       2        2020-09-18
+10309		     3        2020-09-19
+10310		     4        2020-09-20
+
+CustomerID	 CustomerName		   City
+2	           Jerry McGuire	   Brooklyn
+3	           Ana Horton  		   White Plains
+4            Antonio Moreno	   Buffalo
+
+SELECT Order.OrderID, Customers.CustomerName, Orders.OrderDate
+FROM Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID
+
+OrderID	 Customer Name   Order Date
+10308	   Jerry McGuire   2020-09-18                
+10309    Ana Horton      2020-09-19
+10310	   Antonio Moreno  2020-09-20
